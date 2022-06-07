@@ -44,7 +44,8 @@ Vagrant.configure("2") do |config|
 `` db.vm.provision "shell", path: "C:/Users/smhza/Desktop/eng_devops_114/vagrant./provision2.sh", run: "always" ``
 
 - In here automate the manual tasks:
-`` sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+````
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
 echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 sudo apt-get update -y
@@ -59,5 +60,6 @@ sudo ln -s /vagrant/mongod.conf /etc/mongod.conf
 
 sudo systemctl restart mongod
 
-sudo systemctl enable mongod.service``
+sudo systemctl enable mongod.service
+````
 
